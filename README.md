@@ -25,28 +25,8 @@
             - bcrypt, cookie-parser, cors, dotenv, express, express-session, morgan, mysql2
         - 설치한 라이브러리를 이용하여 서버 구현
             - package.json에 있는 scripts 부분에 "start": "nodemon app.js" 입력 후 저장
-            - app.js 파일 생성후 express를 이용하여 서버 실행
-            ```javascript
-            const express = require('express');
-            const cors = require('cors');
-            const router = require('./router');
-            const authRouter = require('./router/auth');
-
-            const app = express();
-
-            app.use(express.urlencoded({ extended: false }));
-            app.use(express.json());
-            app.use(cors());
-
-            app.use('/', router);
-            app.use('/auth', authRouter);
-
-            app.listen(3001, () => {
-            console.log('Listening on 3001');
-            });
-
-        ```
-
+            
+     
 1.  로그인 및 회원가입
     [ ] 로그인
     [ x ] 회원가입
